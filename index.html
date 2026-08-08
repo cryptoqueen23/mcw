@@ -356,6 +356,44 @@
     </section>
   </main>
 
+
+  <!-- Lightweight site assistant: no API required -->
+  <button class="assistant-launcher" id="assistant-launcher"
+          aria-controls="site-assistant" aria-expanded="false">
+    <span class="assistant-launcher-dot"></span>
+    Ask Marcus
+  </button>
+
+  <aside class="site-assistant" id="site-assistant" aria-label="Marcus site assistant" aria-hidden="true">
+    <div class="assistant-header">
+      <div>
+        <span class="assistant-kicker">Virtual Assistant</span>
+        <strong>Ask about Marcus & Rochester</strong>
+      </div>
+      <button class="assistant-close" id="assistant-close" aria-label="Close assistant">×</button>
+    </div>
+
+    <div class="assistant-messages" id="assistant-messages" role="log" aria-live="polite">
+      <div class="assistant-message bot">
+        <p>Hi. I can help you find Marcus’s priorities, privacy proposal, public-safety positions, media, or ways to get involved.</p>
+        <small>Automated website assistant</small>
+      </div>
+    </div>
+
+    <div class="assistant-suggestions" id="assistant-suggestions">
+      <button data-question="What are Marcus's priorities?">Priorities</button>
+      <button data-question="Tell me about the privacy proposal.">Privacy proposal</button>
+      <button data-question="How can I get involved?">Get involved</button>
+    </div>
+
+    <form class="assistant-form" id="assistant-form">
+      <label class="sr-only" for="assistant-input">Ask a question</label>
+      <input id="assistant-input" type="text" autocomplete="off"
+             placeholder="Ask a question..." maxlength="220">
+      <button type="submit">Send</button>
+    </form>
+  </aside>
+
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
